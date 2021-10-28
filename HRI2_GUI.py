@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[47]:
+# In[4]:
 
 
 import nltk
@@ -60,7 +60,7 @@ def predict_class(sentence, model):
 
 def getResponse(ints, intents_json):
     tag = ints[0]['intent']
-    list_of_intents = intents_json['intents']
+    list_of_intents = intents_json['HRI2_intents']
     for i in list_of_intents:
         if(i['tag']== tag):
             result = random.choice(i['responses'])
@@ -97,7 +97,7 @@ def send():
         ChatLog.yview(END)
 
 base = Tk()
-base.title("Human Resouces Intellignt Interactions (HRI2)")
+base.title("Human Resouces Intelligent Interactions (HRI2)")
 base.geometry("420x400")
 base.resizable(width=FALSE, height=FALSE)
 
